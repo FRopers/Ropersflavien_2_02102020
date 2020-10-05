@@ -1,4 +1,81 @@
+/*Eléménts affectant la page*/
 body
 {
     font-family: 'Raleway', sans-serif;
+}
+.bloc_page
+{
+    width: 1500px;
+    margin: auto;
+}
+h1
+{
+    font-size: 1.35em;
+}
+a
+{
+    text-decoration: none;
+    color: #000;
+}
+ul
+{
+    list-style: none;
+}
+/* Header */
+.flex_row
+{
+    display: flex;
+}
+#logo
+{
+    width: 75%;
+}
+nav ul
+{
+    display: flex
+}
+nav li
+{
+    margin-right: 30px;
+}
+#inscrire
+{
+    margin-right: 30px;
+}
+form
+{
+    display: flex;
+    width: 375px;
+    height: 40px;
+}
+.plan
+{
+    flex: 1;
+    background-color: #F2F2F2;
+    border-radius: 10px 0px 0px 10px;
+    position: relative;
+}
+.fa-map-marker-alt
+{
+    position: absolute;
+    right: 35%;
+    bottom: 25%;
+}
+.search
+{
+    flex: 6;
+    border: #F2F2F2 1px solid;
+}
+.submit
+{
+    flex: 2;
+    color: #FFF;
+    border: #0065FC;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #0065FC;
+}
+/* footer */
+footer
+{
+    background-color: #F2F2F2;
 }
