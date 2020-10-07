@@ -1,81 +1,156 @@
 /*Eléménts affectant la page*/
-body
-{
-    font-family: 'Raleway', sans-serif;
+@font-face {
+  font-family: "Raleway";
+  src: url("images/Police/Raleway-VariableFont_wght.ttf");
 }
-.bloc_page
-{
-    width: 1500px;
-    margin: auto;
+* {
+  padding: 0;
+  margin: 0;
 }
-h1
-{
-    font-size: 1.35em;
+body {
+  font-family: "Raleway", sans-serif;
 }
-a
-{
-    text-decoration: none;
-    color: #000;
+.bloc_page {
+  margin: 40px;
 }
-ul
-{
-    list-style: none;
+h1 {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+h2 {
+  font-size: 1.1em;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+ul {
+  list-style: none;
 }
 /* Header */
-.flex_row
-{
-    display: flex;
+/*Logo et menu*/
+.logo_menu {
+  display: flex;
+  margin-bottom: 20px;
 }
-#logo
-{
-    width: 75%;
+#logo {
+  width: 100%; /*valeur 100% acceptable part rapport à nav et div inscrire?*/
 }
-nav ul
-{
-    display: flex
+nav ul {
+  display: flex;
 }
-nav li
-{
-    margin-right: 30px;
+nav a {
+  padding: 38px 25px 0 25px;
 }
-#inscrire
-{
-    margin-right: 30px;
+nav a:hover {
+  color: #0065fc;
+  border-top: #0065fc solid 2px;
 }
-form
-{
-    display: flex;
-    width: 375px;
-    height: 40px;
+.inscrire {
+  padding: 0 50px 0 25px;
 }
-.plan
-{
-    flex: 1;
-    background-color: #F2F2F2;
-    border-radius: 10px 0px 0px 10px;
-    position: relative;
+.inscrire a {
+  color: #0065fc;
+  font-weight: bold;
 }
-.fa-map-marker-alt
-{
-    position: absolute;
-    right: 35%;
-    bottom: 25%;
+/*titre*/
+header h1 {
+  margin-bottom: 5px;
 }
-.search
-{
-    flex: 6;
-    border: #F2F2F2 1px solid;
+/*formulaire de recherche*/
+form {
+  display: flex;
+  width: 30%;
+  height: 40px;
+  margin-top: 15px;
 }
-.submit
-{
-    flex: 2;
-    color: #FFF;
-    border: #0065FC;
-    border-radius: 0px 10px 10px 0px;
-    background-color: #0065FC;
+.plan {
+  width: 10%;
+  border-radius: 10px 0px 0px 10px;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+.search {
+  width: 65%;
+  border: #f2f2f2 1px solid;
+}
+.submit {
+  width: 25%;
+  min-width: 75px;
+  color: #fff;
+  border: #0065fc;
+  border-radius: 0px 20px 20px 0px;
+  background-color: #0065fc;
+}
+/* Filtre - VOIR LES ROND */
+.filtres {
+  display: flex;
+  font-size: 1.1em;
+  font-weight: bold;
+  height: 40px;
+  margin-top: 20px;
+}
+.filtres h2 {
+  padding: 6px;
+}
+.filtres a {
+  display: flex;
+  border: solid #f2f2f2 1px;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+.filtres a:hover {
+  background-color: #0065fc;
+  color: #fff;
+}
+.icône {
+  margin: -1.5px 0 0 -1px;
+  width: 40px;
+  height: 40px;
+  color: #0065fc;
+  background-color: #deebff;
+  border-radius: 20px;
+}
+.dollars {
+  padding: 10px 9px;
+}
+.heart {
+  padding: 11px 11.5px;
+}
+.child {
+  padding: 11px 14px;
+}
+.dog {
+  padding: 10px;
+}
+.nom_filtres {
+  padding: 8px 15px;
+}
+/* information */
+.information {
+  display: flex;
+}
+.information i {
+  color: #0065fc;
+  font-size: 0.7em;
+  margin-top: 16px;
+  padding: 5px 9px;
+  border: #f2f2f2 solid 2px;
+  border-radius: 20px;
+}
+.information p {
+  margin: 20px 0 0 10px;
 }
 /* footer */
-footer
-{
-    background-color: #F2F2F2;
+footer {
+  background-color: #f2f2f2;
+}
+.bloc_footer {
+  display: flex;
+  margin: 0 40px;
+  padding: 20px 0;
+}
+.bloc_footer div {
+  width: 33%;
 }
