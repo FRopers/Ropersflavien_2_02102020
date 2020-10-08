@@ -83,7 +83,7 @@ form {
   border-radius: 0px 20px 20px 0px;
   background-color: #0065fc;
 }
-/* Filtre - VOIR LES ROND */
+/* Filtre*/
 .filtres {
   display: flex;
   font-size: 1.1em;
@@ -141,6 +141,71 @@ form {
 }
 .information p {
   margin: 20px 0 0 10px;
+}
+/*section*/
+.bleu {
+  color: #0065fc;
+}
+.gris {
+  color: #f2f2f2;
+}
+/*section 1*/
+.logements {
+  display: flex;
+  margin: 40px 0;
+}
+.section_1 {
+  width: 70%;
+  margin-right: 40px;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+}
+.bloc_s1 {
+  display: flex;
+  justify-content: space-between;
+}
+.bloc_s1 a {
+  width: 31%;
+  max-height: 300px;
+  margin: 15px 0;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+.images_s1 {
+  height: 70%;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+.images_s1 img {
+  max-width: 100%;
+}
+
+.photo_la_mer {
+  margin-top: -75px;
+}
+.photo_Amina {
+  margin-top: -175px;
+}
+.descriptif {
+  margin: 10px;
+}
+.descriptif h3 {
+  margin-bottom: 5px;
+}
+.notes {
+  margin-top: 10px;
+}
+/*section 2*/
+.section_2 {
+  width: 30%;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+}
+.section_3 {
+  width: 100%;
+  border: black solid 1px;
 }
 /* footer */
 footer {
