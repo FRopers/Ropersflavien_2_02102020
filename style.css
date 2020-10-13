@@ -11,7 +11,7 @@ body {
   font-family: "Raleway", sans-serif;
 }
 .bloc_page {
-  margin: 40px;
+  margin: 0 40px 40px 40px;
 }
 h1 {
   font-size: 1.3em;
@@ -19,6 +19,10 @@ h1 {
 }
 h2 {
   font-size: 1.1em;
+  font-weight: bold;
+}
+h3 {
+  font-weight: bold;
 }
 a {
   text-decoration: none;
@@ -29,27 +33,31 @@ ul {
 }
 /* Header */
 /*Logo et menu*/
+header {
+  display: flex;
+  flex-direction: column;
+}
 .logo_menu {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
-#logo {
-  width: 100%; /*valeur 100% acceptable part rapport à nav et div inscrire?*/
-}
-nav ul {
+.logo_menu *{
   display: flex;
 }
-nav a {
-  padding: 38px 25px 0 25px;
+.logo {
+  padding-top: 40px;
 }
-nav a:hover {
+nav a {
+  padding: 40px 25px 0 25px;
+}
+.ancre:hover {
+  padding-top: 38px;
   color: #0065fc;
   border-top: #0065fc solid 2px;
 }
 .inscrire {
-  padding: 0 50px 0 25px;
-}
-.inscrire a {
   color: #0065fc;
   font-weight: bold;
 }
@@ -61,6 +69,7 @@ header h1 {
 form {
   display: flex;
   width: 30%;
+  min-width: 250px;
   height: 40px;
   margin-top: 15px;
 }
@@ -86,6 +95,7 @@ form {
 /* Filtre*/
 .filtres {
   display: flex;
+  flex-wrap: wrap;
   font-size: 1.1em;
   font-weight: bold;
   height: 40px;
@@ -105,24 +115,15 @@ form {
   color: #fff;
 }
 .icône {
+  display: flex;
   margin: -1.5px 0 0 -1px;
   width: 40px;
   height: 40px;
   color: #0065fc;
   background-color: #deebff;
   border-radius: 20px;
-}
-.dollars {
-  padding: 10px 9px;
-}
-.heart {
-  padding: 11px 11.5px;
-}
-.child {
-  padding: 11px 14px;
-}
-.dog {
-  padding: 10px;
+  align-items: center;
+  justify-content: center;
 }
 .nom_filtres {
   padding: 8px 15px;
@@ -134,13 +135,13 @@ form {
 .information i {
   color: #0065fc;
   font-size: 0.7em;
-  margin-top: 16px;
+  margin-top: 36px;
   padding: 5px 9px;
   border: #f2f2f2 solid 2px;
   border-radius: 20px;
 }
 .information p {
-  margin: 20px 0 0 10px;
+  margin: 40px 0 0 10px;
 }
 /*section*/
 .bleu {
@@ -148,6 +149,9 @@ form {
 }
 .gris {
   color: #f2f2f2;
+}
+.prix {
+  font-weight: bold;
 }
 /*section 1*/
 .logements {
@@ -164,6 +168,7 @@ form {
 .bloc_s1 {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .bloc_s1 a {
   width: 31%;
@@ -172,29 +177,61 @@ form {
   padding: 5px;
   border-radius: 20px;
   background-color: #fff;
+  box-shadow: 0 0 20px rgb(210, 210, 210);
 }
-.images_s1 {
-  height: 65%;
+.photo_s1_b1 {
+  height: 60%;
+  background: url(images/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
   border-radius: 15px 15px 0 0;
-  overflow: hidden;
 }
-.images_s1 img {
-  max-width: 100%;
+.photo_s1_b2 {
+  height: 60%;
+  background: url(images/hebergements/fred-kleber-gTbaxaVLvsg-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
 }
-.photo_la_mer {
-  margin-top: -75px;
+.photo_s1_b3 {
+  height: 60%;
+  background: url(images/hebergements/reisetopia-B8WIgxA_PFU-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
 }
-.photo_Amina {
-  margin-top: -175px;
+.photo_s1_b4 {
+  height: 60%;
+  background: url(images/hebergements/annie-spratt-Eg1qcIitAuA-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+}
+.photo_s1_b5 {
+  height: 60%;
+  background: url(images/hebergements/nicate-lee-kT-ZyaiwBe0-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+}
+.photo_s1_b6 {
+  height: 60%;
+  background: url(images/hebergements/febrian-zakaria-M6S1WvfW68A-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
 }
 .descriptif_s1 {
-  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 40%;
+  padding-left: 10px;
 }
-.descriptif_s1 h3 {
-  margin-bottom: 15px;
-}
-.notes_s1 {
+.afficher {
+  display: block;
   margin-top: 15px;
+  font-weight: bold;
 }
 /*section 2*/
 .section_2 {
@@ -202,12 +239,6 @@ form {
   padding: 30px;
   border-radius: 20px;
   background-color: #f2f2f2;
-}
-.bloc_s2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 700px;
 }
 .populaire {
   display: flex;
@@ -217,34 +248,55 @@ form {
 .graph {
   font-size: 1.5em;
 }
+.bloc_s2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 700px;
+}
 .bloc_s2 a {
   height: 29%;
   padding: 5px;
   display: flex;
+  align-items: center;
   border-radius: 20px;
   background-color: #fff;
+  box-shadow: 0 0 20px rgb(210, 210, 210);
 }
-.images_s2 {
+.photo_s2_b1 {
   width: 35%;
+  height: 100%;
+  background: url(images/hebergements/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
   border-radius: 15px 0 0 15px;
-  overflow: hidden;
 }
-.photos_s2 {
-  max-height: 100%;
-  margin-left: -50px;
+.photo_s2_b2 {
+  width: 35%;
+  height: 100%;
+  background: url(images/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
+  border-radius: 15px 0 0 15px;
 }
-.photo_tout_bleu_blanc {
-  max-width: 100%;
-  margin-top: -50px;
+.photo_s2_b3 {
+  width: 35%;
+  height: 100%;
+  background: url(images/hebergements/febrian-zakaria-sjvU0THccQA-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
+  border-radius: 15px 0 0 15px;
 }
 .descriptif_s2 {
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 65%;
+  height: 85%;
+  padding-left: 15px;
 }
 .descriptif_s2 h3 {
-  margin-bottom: 20px;
-}
-.notes_s2 {
-  margin-top: 90px;
+  margin-bottom: 15px;
 }
 /*section 3*/
 .section_3 h2 {
@@ -254,64 +306,78 @@ form {
   display: flex;
   justify-content: space-between;
 }
-.vignette_s3 {
+.vignettes_s3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 20px;
   width: 23.4%;
   height: 600px;
+}
+.vignettes_s3 a {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 0 20px rgb(210, 210, 210);
+}
+.vignettes_s3_b1-b2 {
+  height: 100%;
+}
+.vignette_s3_b2_1 {
+  height: 320px;
+}
+.vignette_s3_b2_2 {
+  height: 240px;
+}
+.vignette_s3_b4 {
+  height: 280px;
+}
+.photo_s3_b1 {
+  height: 100%; /*viable ?*/
+  background: url(images/activites/small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
+}
+.photo_s3_b2_1 {
+  height: 100%;
+  background: url(images/activites/small/paul-hermann-QFTrLdQIRhI-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
+}
+.photo_s3_b2_2 {
+  height: 100%;
+  background: url(images/activites/small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
+}
+.photo_s3_b3 {
+  height: 100%;
+  background: url(images/activites/small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
+}
+.photo_s3_b4_1 {
+  height: 100%;
+  background: url(images/activites/small/florian-wehde-xW9e8gdotxI-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
+}
+.photo_s3_b4_2 {
+  height: 100%;
+  background: url(images/activites/small/lena-paulin-wH2-EJoDcV0-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
 }
 .intitulé_s3 {
-  height: 50px;
-  padding: 20px 0 0 20px;
+  align-items: center;
+  padding-left: 20px;
+  height: 60px;
 }
-.photos_s3 {
-  height: 530px;
-  overflow: hidden;
-}
-.photos_s3 img {
-  max-height: 100%;
-}
-.vignette_Pomègues {
-  display: block;
-  height: 320px;
-  border-radius: 20px;
-  margin-bottom: 40px;
-  overflow: hidden;
-}
-.vignette_Pomègues div {
-  height: 250px;
-  overflow: hidden;
-}
-.vignette_Pomègues img {
-  max-width: 100%;
-}
-.vignette_Frioul {
-  display: block;
-  height: 240px;
-  border-radius: 20px;
-  margin-bottom: 40px;
-  overflow: hidden;
-}
-.vignette_Frioul div {
-  height: 170px;
-  overflow: hidden;
-}
-.vignette_Frioul img {
-  max-width: 100%;
-}
-.vignette_s3_4 {
-  display: block;
-  height: 280px;
-  margin-bottom: 40px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-.vignette_s3_4 div {
-  height: 207px;
-  overflow: hidden;
-}
-.vignette_s3_4 img {
-  max-width: 100%;
+.intitulé_s3 h3 {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 /* footer */
 footer {
