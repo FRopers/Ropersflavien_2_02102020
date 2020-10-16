@@ -14,10 +14,12 @@ body {
   margin: 0 40px 40px 40px;
 }
 h1 {
+  margin-bottom: 8px;
   font-size: 1.3em;
   font-weight: bold;
 }
 h2 {
+  margin-bottom: 20px;
   font-size: 1.2em;
   font-weight: bold;
 }
@@ -25,8 +27,7 @@ h3 {
   font-size: 1.1em;
   font-weight: bold;
 }
-i
-{
+i {
   font-size: 0.9em;
 }
 a {
@@ -38,10 +39,6 @@ ul {
 }
 /* Header */
 /*Logo et menu*/
-.bloc_page {
-  display: flex;
-  flex-direction: column;
-}
 .logo_menu {
   display: flex;
   justify-content: space-between;
@@ -52,9 +49,9 @@ ul {
 }
 .logo {
   padding-top: 35px;
-  width: 100%;
+  width: 100%;/*obliger à prendre toute la place*/
 }
-.ancre {
+.ancre,.inscrire{
   padding: 40px 25px 0 25px;
 }
 .ancre:hover {
@@ -63,26 +60,22 @@ ul {
   border-top: #0065fc solid 2px;
 }
 .inscrire {
-  padding: 40px 25px 0 25px;
   color: #0065fc;
   font-weight: bold;
-}
-/*titre*/
-header h1 {
-  margin-bottom: 5px;
 }
 /*formulaire de recherche*/
 form {
   display: flex;
   width: 30%;
-  min-width: 250px;
-  height: 40px;
+  min-width: 300px;
+  height: 50px;
   margin-top: 20px;
 }
 .plan {
+  font-size: 1em;
   width: 10%;
   border-radius: 10px 0px 0px 10px;
-  padding: 10px 0;
+  padding: 15px 0;
   text-align: center;
   background-color: #f2f2f2;
 }
@@ -94,17 +87,17 @@ form {
   width: 25%;
   min-width: 75px;
   color: #fff;
+  background-color: #0065fc;
   border: #0065fc;
   border-radius: 0px 10px 10px 0px;
-  background-color: #0065fc;
 }
 .loupe {
   width: 15%;
-  margin-left: -6px;
+  margin-left: -8px;
   color: #fff;
+  background-color: #0065fc;
   border: #0065fc;
   border-radius: 10px;
-  background-color: #0065fc;
 }
 /* Filtre*/
 .filtres {
@@ -112,39 +105,44 @@ form {
   flex-wrap: wrap;
   font-size: 1.1em;
   font-weight: bold;
-  margin-top: 30px;
+  margin: 30px 0 10px 0px;
+}
+.filtres *{
+  display: flex;
+}
+.filtres h2,a {
+  height: 38px;
 }
 .filtres h2 {
-  padding: 6px;
+  align-items: center;
+  padding-left: 6px;
 }
 .filtres a {
-  display: flex;
   border: solid #f2f2f2 1px;
   border-radius: 20px;
-  margin: 0 0 10px 20px;
+  margin: 0 0 20px 20px;
 }
 .filtres a:hover {
-  background-color: #0065fc;
   color: #fff;
+  background-color: #0065fc;
 }
 .icône {
-  display: flex;
-  margin: -1.5px 0 0 -1px;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
+  margin: -1px 0 0 -1px;
   color: #0065fc;
   background-color: #deebff;
   border-radius: 20px;
-  align-items: center;
-  justify-content: center;
 }
 .nom_filtres {
-  padding: 8px 15px;
+  align-items: center;
+  padding: 0 15px 0 10px;
 }
 /* information */
 .information {
   display: flex;
-  margin-top: 30px;
 }
 .information i {
   color: #0065fc;
@@ -187,7 +185,7 @@ form {
 .bloc_s1 a {
   width: 30%;
   height: 300px;
-  margin: 15px 0;
+  margin-bottom: 30px;
   padding: 5px;
   border-radius: 20px;
   background-color: #fff;
@@ -243,8 +241,6 @@ form {
   padding-left: 10px;
 }
 .afficher {
-  display: block;
-  margin-top: 15px;
   font-weight: bold;
 }
 /*section 2*/
@@ -254,16 +250,16 @@ form {
   border-radius: 20px;
   background-color: #f2f2f2;
 }
-.populaire {
+.section_2 *{
   display: flex;
+}
+.populaire {
   justify-content: space-between;
-  margin-bottom: 15px;
 }
 .graph {
   font-size: 1.5em;
 }
 .bloc_s2 {
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 700px;
@@ -271,8 +267,6 @@ form {
 .bloc_s2 a {
   height: 28%;
   padding: 5px;
-  display: flex;
-  align-items: center;
   border-radius: 20px;
   background-color: #fff;
   box-shadow: 0 0 20px rgb(210, 210, 210);
@@ -302,26 +296,26 @@ form {
   border-radius: 15px 0 0 15px;
 }
 .descriptif_s2 {
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 65%;
-  height: 85%;
-  padding: 0 15px;
+  padding: 10px 15px;
+}
+.descriptif_s2 div:first-child{
+  flex-direction: column;
 }
 .descriptif_s2 h3 {
   margin-bottom: 15px;
 }
 /*section 3*/
-.section_3 h2 {
-  margin-bottom: 20px;
-}
 .bloc_s3 {
   display: flex;
   justify-content: space-between;
 }
-.vignettes_s3 {
+.bloc_s3 *{
   display: flex;
+}
+.vignettes_s3 {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 20px;
@@ -329,7 +323,6 @@ form {
   height: 600px;
 }
 .vignettes_s3 a {
-  display: flex;
   flex-direction: column;
   border-radius: 20px;
   overflow: hidden;
@@ -390,7 +383,6 @@ form {
 }
 .intitulé_s3 h3 {
   height: 100%;
-  display: flex;
   align-items: center;
 }
 /* footer */
@@ -406,8 +398,11 @@ footer {
   width: 33%;
   margin-right: 40px;
 }
-.bloc_footer * {
+.bloc_footer h3 {
   margin-bottom: 20px;
+}
+.bloc_footer li {
+  margin-bottom: 10px;
 }
 /*responsive*/
 @media only screen and (max-width: 1200px) {
@@ -417,17 +412,15 @@ footer {
   header{
     margin: 0 40px;
   }
+  .filtres h2 {
+    padding: unset;
+    width: 100%; /*saut à la ligne*/
+  }
+  .filtres a {
+    margin: 0 10px 10px 0;
+  }
   .logements{
     flex-wrap: wrap-reverse;
-  }
-  .bloc_s1 a{
-    width: 47%;
-  }
-  .section_1{
-    margin: 0 40px;
-    padding: 30px 0;
-    background-color: #fff;
-    width: 100%;
   }
   .section_2{
     width: 100%;
@@ -441,6 +434,15 @@ footer {
   .bloc_s2 a{
     height: 100%;
     width: 30%;
+  }
+  .section_1{
+    margin: 0 40px;
+    padding: 30px 0;
+    background-color: #fff;
+    width: 100%;
+  }
+  .bloc_s1 a{
+    width: 47%;
   }
   .section_3{
     margin: 0 40px;
@@ -479,8 +481,6 @@ footer {
     height: 50px;
     order: 1;
     width: 25%;
-  }
-  .logo_reservia {
     margin-left: 15px;
   }
   nav {
@@ -492,14 +492,13 @@ footer {
     width: 100%;
   }
   .ancre {
-    padding: unset;
-    padding: 10px;
+    padding: 10px 0;
     justify-content: center;
     align-items: center;
     border-bottom: solid 2px #f2f2f2;
   }
   .ancre:hover {
-    padding: unset;
+    padding: 10px 0 8px 0;
     border-top: unset;
     border-bottom: #0065fc solid 2px;
   }
@@ -507,11 +506,12 @@ footer {
     order: 2;
     width: 25%;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
+    margin-right: 15px;
   }
   .inscrire {
+    align-items: center;
     padding: unset;
-    margin-right: 15px;
   }
   .information {
     margin: 30px 15px;
@@ -539,13 +539,6 @@ footer {
   /*filtres*/
   .filtres {
     margin: 0 15px;
-  }
-  .filtres h2 {
-    padding: unset;
-    width: 100%; /*saut à la ligne*/
-  }
-  .filtres a {
-    margin: 0 10px 10px 0;
   }
   /*section*/
   .logements {
@@ -598,8 +591,5 @@ footer {
   }
   .bloc_footer div {
     width: 100%;
-  }
-  .bloc_footer h3 {
     margin-bottom: 30px;
   }
-}
