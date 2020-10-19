@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link href="style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <link href="images/fontawesome/css/all.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- regarder sur le net-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservia</title>
 </head>
 
@@ -19,8 +19,8 @@
 
                 <nav>
                     <ul>
-                        <li><a href="#hébergements" class="ancre">Hébergements</a></li>
-                        <li><a href="#activités" class="ancre">Activités</a></li>
+                        <li><a href="#hebergements" class="ancre">Hébergements</a></li>
+                        <li><a href="#activites" class="ancre">Activités</a></li>
                     </ul>
                 </nav>
 
@@ -34,34 +34,36 @@
                 <p>En plein centre ville ou en pleine nature</p>
                 <form method="post" action="#">
                     <i class="fas fa-map-marker-alt plan"></i>
-                    <input type="search" name="search" class="search" />
+                    <input type="search" name="search" class="search" placeholder="Marseille, France" />
                     <input type="submit" value="Rechercher" class="submit" />
-                    <input type="submit" class="fas fa-search loupe" value="&#xf002;" />
+                    <button type="submit" class="loupe">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </form>
             </div>
 
             <div class="filtres">
                 <h2>Filtres</h2>
                 <a href="#">
-                    <div class="icône">
-                        <i class="fas fa-money-bill-wave"></i><!-- mettre l'icone en flex, wrap-->
+                    <div class="icone">
+                        <i class="fas fa-money-bill-wave"></i>
                     </div>
                     <span class="nom_filtres">Économique</span>
                 </a>
                 <a href="#">
-                    <div class="icône">
+                    <div class="icone">
                         <i class="fas fa-child"></i>
                     </div>
                     <span class="nom_filtres">Familial</span>
                 </a>
                 <a href="#">
-                    <div class="icône">
+                    <div class="icone">
                         <i class="fas fa-heart"></i>
                     </div>
                     <span class="nom_filtres">Romantique</span>
                 </a>
                 <a href="#">
-                    <div class="icône">
+                    <div class="icone">
                         <i class="fas fa-dog"></i>
                     </div>
                     <span class="nom_filtres">Animaux autorisés</span>
@@ -79,7 +81,7 @@
 
         <div class="logements">
             <section class="section_1">
-                <h2 id="hébergements">Hébergements à Marseille</h2>
+                <h2 id="hebergements">Hébergements à Marseille</h2>
                 <div class="bloc_s1">
                     <a href="#">
                         <div class="photo_s1_b1">
@@ -192,6 +194,7 @@
                     <h2>Les plus populaires</h2>
                     <i class="fas fa-chart-line graph"></i>
                 </div>
+                
                 <div class="bloc_s2">
                     <a href="#">
                         <div class="photo_s2_b1">
@@ -256,14 +259,14 @@
         </div>
 
         <section class="section_3">
-            <h2 id="activités">Activités à Marseille</h2>
+            <h2 id="activites">Activités à Marseille</h2>
             <div class="bloc_s3">
                 <div class="vignettes_s3">
                     <a href="#" class="vignettes_s3_b1-b2">
                         <div class="photo_s3_b1">
                         </div>
 
-                        <div class="intitulé_s3">
+                        <div class="intitule_s3">
                             <h3>Vieux Port</h3>
                         </div>
                     </a>
@@ -274,7 +277,7 @@
                         <div class="photo_s3_b2_1">
                         </div>
 
-                        <div class="intitulé_s3">
+                        <div class="intitule_s3">
                             <h3>Fort de Pomègues</h3>
                         </div>
                     </a>
@@ -283,7 +286,7 @@
                         <div class="photo_s3_b2_2">
                         </div>
 
-                        <div class="intitulé_s3">
+                        <div class="intitule_s3">
                             <h3>Îles du Frioul</h3>
                         </div>
                     </a>
@@ -294,7 +297,7 @@
                         <div class="photo_s3_b3">
                         </div>
 
-                        <div class="intitulé_s3">
+                        <div class="intitule_s3">
                             <h3>Parc National des Calanques</h3>
                         </div>
                     </a>
@@ -305,7 +308,7 @@
                         <div class="photo_s3_b4_1">
                         </div>
 
-                        <div class="intitulé_s3">
+                        <div class="intitule_s3">
                             <h3>Notre-Dame-de-la-Garde</h3>
                         </div>
                     </a>
@@ -314,7 +317,7 @@
                         <div class="photo_s3_b4_2">>
                         </div>
 
-                        <div class="intitulé_s3">
+                        <div class="intitule_s3">
                             <h3>Parc Longchamp</h3>
                         </div>
                     </a>
